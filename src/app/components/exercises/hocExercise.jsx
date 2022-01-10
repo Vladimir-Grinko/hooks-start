@@ -1,7 +1,22 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import Divider from "../common/divider";
+
+import SimpleComponent from "../examples/hoc/simpleComponent";
+import withPropsStyles from "../examples/hoc/withPropsStyles";
 
 const HocExercise = () => {
+    const isAuth = localStorage.getItem("user");
+    const WithPropsStyles = withPropsStyles(SimpleComponent);
+
+    const handleLogOut = () => {
+        localStorage.removeItem("user");
+        alert("Вы вышли");
+    };
+    const handleLogIn = () => {
+        localStorage.setItem("user", "new User");
+        alert("Вы вошли");
+    };
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
@@ -47,6 +62,8 @@ const HocExercise = () => {
                     <code>user</code> в <code>localStorage</code>
                 </li>
             </ul>
+            <Divider />
+            <WithPropsStyles isAuth={isAuth} onLogIn={handleLogIn} onLogOut={handleLogOut} />
         </CollapseWrapper>
     );
 };

@@ -40,7 +40,7 @@ const UseRefExercise = () => {
             >
                 <small ref={blockRef}>Блок</small>
             </div>
-            <button className="btn btn-primary mt-2" onClick={handleClick} >Измененить свойства объекта</button>
+            <button className="btn btn-secondary mt-2" onClick={handleClick} >Измененить свойства объекта</button>
         </CollapseWrapper>
     );
 };
