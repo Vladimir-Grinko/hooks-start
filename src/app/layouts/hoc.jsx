@@ -7,6 +7,8 @@ import BlockQuoteWrapper from "../components/common/blockQuote";
 import Title from "../components/common/typografy/title";
 import Subtitle from "../components/common/typografy/subtitle";
 import Divider from "../components/common/divider";
+import SimpleComponent from "../components/exercises/simpleComponent";
+
 const HOCLayout = () => {
     return (
         <>
@@ -36,6 +38,9 @@ const HOCLayout = () => {
             <Divider />
             <Subtitle>Упражнения</Subtitle>
             <HocExercise />
+            <Divider />
+            <Subtitle>Решение Упражнения</Subtitle>
+            <SimpleComponent />
         </>
     );
 };
