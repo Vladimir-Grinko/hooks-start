@@ -8,8 +8,10 @@ import Title from "../components/common/typografy/title";
 import Subtitle from "../components/common/typografy/subtitle";
 import Divider from "../components/common/divider";
 import SimpleComponent from "../components/exercises/simpleComponent";
+import functionsHoc from "../components/exercises/functionalsHoc";
 
 const HOCLayout = () => {
+    const WithFunctionsHoc = functionsHoc(SimpleComponent);
     return (
         <>
             <Title>HOC</Title>
@@ -40,7 +42,7 @@ const HOCLayout = () => {
             <HocExercise />
             <Divider />
             <Subtitle>Решение Упражнения</Subtitle>
-            <SimpleComponent />
+            <WithFunctionsHoc />
         </>
     );
 };
